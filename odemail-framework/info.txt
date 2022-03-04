@@ -1,0 +1,102 @@
+
+=======================================
+OD EMAIL.
+======================================
+#1: установить пакеты.
+npm install
+#2: из папки od-libs: клонировать библиотеки в--> node_modules
+
+#запустит проект.
+npm start
+
+Команды:
+
+
+#inline you style
+npm run build
+
+#to build as above, then submit to litmus for testing. AWS S3 Account details required (config.json)
+npm run litmus
+
+#to build as above, then send to specified email address for testing. SMTP server details required (config.json)
+npm run mail
+or
+npm run mail -- --to="example.com"
+
+#to build as above, then zip HTML and images for easy deployment to email marketing services.
+npm run zip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Как сделать презентацию на движке Shower
+https://www.youtube.com/watch?v=tyHitZ6H9jY
+
+
+
+https://github.com/foundation/foundation-emails-template
+https://github.com/foundation/inky
+
+Кастомный компонент:
+inky/lib/inky.js
+inky/lib/componentFactory.js
+
+все
+
+
+
+
+
+==========================================
+Link
+==========================================
+My info:
+Верстка email рассылок от А до Я для чайников - https://habr.com/ru/post/252279/
+Рассылай и властвуй: вёрстка рассылки тогда и сейчас -https://habr.com/ru/company/2gis/blog/427653/
+инструменты для создания и тестирования рассылки
+Web Fonts: How to Make Them Work Perfectly in Email - https://www.litmus.com/blog/the-ultimate-guide-to-web-fonts/
+
+M2 doc:
+Email templates - https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/templates/template-email.html
+Основные понятия шаблонов - https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/templates/template-override.html
+Перенос пользовательских шаблонов электронной почты - https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/templates/template-email-migration.html
+
+https://caniuse.email/
+https://mailtrap.io/
+https://get.foundation/emails/docs/
+
+https://www.brafton.com/blog/email-marketing/the-history-of-email-marketing/
+https://www.litmus.com/resources/foundations-of-email-design/
+
+=======================================
+info
+=======================================
+inky - тут блоки
+
+
+====================================
+посилання:
+https://caniuse.email/
+https://mailtrap.io/
+https://get.foundation/emails/docs/

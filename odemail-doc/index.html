@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="assets/images/favicon.png" rel="icon" />
+  <title>Documentation | Your ThemeForest item Name</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <div id="main-wrapper">
+
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><spanclass="w-75"></span><span class="w-50"></span></button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="index.html" title="iDocs Template">
+            <img src="assets/images/logo.png" alt="Docs" /> 
+            <span class="text-2 ml-2">v1.0</span>
+          </a>
+          <!-- Logo End -->
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content -->
+    <div id="content" role="main">
+
+      <!-- Sidebar Navigation-->
+      <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column ">
+          <li class="nav-item"><a class="nav-link active" href="#intro_start">Getting Started</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#intro_installation">Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro_html">HTML Structure</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro_less">Less</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro_odinky">Odinky</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#info-components">Components</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#component-grid">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="#component-buttons">Buttons</a></li>
+              <li class="nav-item"><a class="nav-link" href="#component-spacer">Spacer</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#changelog">Changelog</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#changelog_v1-0">v1.0</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#info-faq">FAQ about emails</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#faq-test">%%%name%%%</a></li>
+              <li class="nav-item"><a class="nav-link" href="#faq-test">%%%name%%%</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Docs Content-->
+      <div class="idocs-content">
+        <div class="container">
+
+          <!-- Getting Started-->
+          <section id="intro_start">
+            <h1>Documentation</h1>
+          </section>
+          <hr class="divider">
+
+          <!-- Installation-->
+          <section id="intro_installation">
+            <h2>Installation</h2>
+            <p class="lead">Follow the steps below to setup your site template:</p>
+          </section>
+          <hr class="divider">
+
+          <!-- HTML Structure-->
+          <section id="intro_html">
+            <h2>HTML Structure</h2>
+            <p>ODemail follows a simple and easy to customize coding structure. Here is the sample for your reference:</p>
+            <ul>
+              <li><code>src/assets</code> - Contains all of the assets referenced
+                <ul>
+                  <li><code>components/</code> - components that you can connect to templates</li>
+                  <li><code>templates/</code> - templates Files
+                    <ul>
+                      <li><code>index.html</code> - ODemail Homepage</li>
+                      <li><code>&lt;YouTemplate&gt;.html</code> - created new template hire</li>
+                    </ul>
+                </li>
+                  <li><code>web/</code> - Contains all of the assets referenced
+                    <ul>
+                      <li><code>images/</code> - Images files</li>
+                      <li><code>css/</code> - less files</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <hr class="divider">
+
+          <!-- Sass-->
+          <section id="intro_less">
+            <h2>Less</h2>
+            <p>We have added LESS <code>.less</code> files in template. You can find less file here - <code>src/assets/web/css</code></p>
+            <p>Open the <code>less/_variables.scss</code> and Edit the values according to your needs. If you need more Advanced Setup then you can Edit the Respective Files yourself which have been branched inside the same Folder. It is completely at your discretion only to include the Required <code>.less</code></p>
+            <p>Files you need to minimize the amount of CSS & including only the Styles of the Blocks you need. This can be setup in your <code>email-inline.less</code> File.</p>
+          </section>
+          <hr class="divider">
+
+          <!-- Getting Started-->
+          <section id="intro_odinky">
+            <h1>Odinky</h1>
+            <p>OdInky is a templating language that converts simple HTML tags into the complex table HTML required for emails.</p>
+            <p class="lead">Odinky - his fork <a href="https://github.com/foundation/inky" target="_blank">inky libs</a></p>
+            <hr>
+            <ul>
+              <li><strong>Grid:</strong>
+                <ul>
+                  <li><code>&lt;container&gt;</code></li>
+                  <li><code>&lt;row&gt;</code></li>
+                  <li><code>&lt;columns&gt;</code></li>
+                </ul>
+              </li>
+              <li><strong>Button:</strong> <code>&lt;button&gt;</code>, <code>&lt;button-secondary&gt;</code>, <code>&lt;button-link&gt;</code></li>
+              <li><strong>Spacer:</strong> <code>&lt;spacer&gt;</code></li>
+              <li><strong>Menu:</strong>
+                <ul>
+                  <li><code>&lt;menu&gt;</code></li>
+                  <li><code>&lt;item&gt;</code></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <hr class="divider">
+
+<!-- Components -->
+<section id="info-components">
+  <h2>Components</h2>
+</section>
+
+<!--
+<section id="component-test">
+  <h2>Test</h2>
+  <p class="text-4">Default component.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+    inky
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  HTML
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/bottons.html"></iframe>
+</section>
+
+<hr class="divider">
+-->
+
+<section id="component-grid">
+  <h2>Grid</h2>
+  <p class="text-4">The grid has two core elements: the row and column. Rows define horizontal sections of content, and columns carve up the row into side-by-side sections.</p>
+  <p>A column has a size between 1 and <b>12—this</b> is how many columns wide the element is. ODemail uses a 12-column grid, so 6 columns is half the width of the whole row.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+  &lt;row&gt;
+    &lt;columns col=&quot;4&quot;&gt;
+      &lt;center&gt;
+        &lt;img src=&quot;https://placehold.co/100x150/777777/&amp;text=images&quot; alt=&quot;&quot; class=&quot;demo-col__img&quot;&gt;
+      &lt;/center&gt;
+    &lt;/columns&gt;
+    &lt;columns col=&quot;8&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium id diam nec ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae condimentum velit. Praesent rhoncus, nisl et vestibulum tincidunt, turpis sem tincidunt mi, nec dictum urna nisi ullamcorper ante. Maecenas eu turpis id urna rhoncus ultrices. Nam maximus sollicitudin pharetra. Donec velit quam, vulputate ut malesuada at, laoreet et magna. Sed vitae risus sed libero posuere feugiat vel vehicula augue. &lt;/p&gt;
+    &lt;/columns&gt;
+  &lt;/row&gt;
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;table class=&quot;row&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th class=&quot;col-4 columns&quot;&gt;
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th&gt;
+                  &lt;center&gt;
+                    &lt;img src=&quot;https://placehold.co/100x150/777777/&amp;text=images&quot; alt
+                      class=&quot;demo-col__img float-center&quot; align=&quot;center&quot;&gt;
+                  &lt;/center&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/th&gt;
+        &lt;th class=&quot;col-8 columns&quot;&gt;
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium id diam
+                    nec ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas
+                    vitae condimentum velit. Praesent rhoncus, nisl et vestibulum tincidunt, turpis sem
+                    tincidunt mi, nec dictum urna nisi ullamcorper ante. Maecenas eu turpis id urna
+                    rhoncus ultrices. Nam maximus sollicitudin pharetra. Donec velit quam, vulputate ut
+                    malesuada at, laoreet et magna. Sed vitae risus sed libero posuere feugiat vel
+                    vehicula augue. &lt;/p&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/grid.html"></iframe>
+</section>
+<hr class="divider">
+
+
+<section id="component-buttons">
+  <h2>Buttons</h2>
+  <p>Buttons are convenient tools when you need more traditional actions. To that end, <b>OdEmail</b> has many easy to use button styles that you can customize or override to fit your needs.</p>
+  <p>Creating a bullet-proof button that works in all email clients requires a table nested inside of a table. Put the class <code>.button</code> on the outer <code>&lt;table&gt;</code>. Inside of the inner table, put an <code>&lt;a&gt;</code> with an <code>href</code> attribute containing your link.</p>
+  <p>In Inky HTML, the <code>&lt;button&gt;</code> tag creates all of this markup for you.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+  &lt;button href=&quot;#&quot;&gt;Button&lt;/button&gt;
+  &lt;button-secondary href=&quot;#&quot;&gt;Secondary&lt;/button-secondary&gt;
+  &lt;button-link href=&quot;#&quot;&gt;Btn link&lt;/button-link&gt;
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+&lt;table class=&quot;button&quot;&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;a align=&quot;center&quot; href=&quot;#&quot;&gt;Button&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&quot;button-secondary&quot;&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;a align=&quot;center&quot; href=&quot;#&quot;&gt;Secondary&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&quot;button-link&quot;&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;a align=&quot;center&quot; href=&quot;#&quot;&gt;Btn link&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/bottons.html"></iframe>
+</section>
+<hr class="divider">
+
+
+<section id="component-spacer">
+  <h2>Test</h2>
+  <p class="text-4">Default component.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+  &lt;p&gt;Stuff on top&lt;/p&gt;
+  &lt;spacer size=&quot;100&quot;&gt;&lt;/spacer&gt;
+  &lt;p&gt;Stuff on bottom&lt;/p&gt;
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;p&gt;Stuff on top&lt;/p&gt;
+    &lt;table class=&quot;spacer&quot;&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td height=&quot;100&quot; style=&quot;font-size:100px;line-height:100px;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;p&gt;Stuff on bottom&lt;/p&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/spacer.html"></iframe>
+</section>
+<hr class="divider">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Changelog -->
+          <section id="info-changelog">
+            <h2>Changelog</h2>
+            <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p>
+            <h3 id="v1-0">Version 1.0 <small class="text-muted">(04.03.2022)</small></h3>
+            <ul class="changelog">
+              <li><span class="badge badge-success">Added</span> Your information here for added new feature</li>
+              <li><span class="badge badge-danger">Fixed</span> Some minor bugs for browser compatibility</li>
+              <li><span class="badge badge-danger">Fixed</span> Some minor bugs for responsive</li>
+              <li><span class="badge badge-info">Updated</span> FontAwesome to Latest Version</li>
+              <li><span class="badge badge-info">Updated</span> Bootstrap to Latest Version</li>
+              <li><span class="badge badge-info">Updated</span> Improvements in CSS and JS</li>
+            </ul>
+            <hr class="divider">
+            <p>Initial Release</p>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer-->
+    <footer id="footer" class="section bg-dark footer-text-light">
+      <div class="container">
+        <p class="text-center">Copyright &copy; 2022 All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript-->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
