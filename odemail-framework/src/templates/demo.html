@@ -3,7 +3,7 @@ layout: index-layout
 subject: My Demo Email
 ---
 {{>header}}
-<banner class="demo-banner">
+<banner>
   <img src="web/images/email/demo/banner.png" class="banner__img">
 </banner>
 
@@ -16,8 +16,19 @@ subject: My Demo Email
   <button href="#">Button</button>
 </table-content>
 
+<h-line></h-line>
+<spacer size="50"></spacer>
+<container class="custom-style">
+  <h2 class="text-center">Custom style for component</h2>
+  <row class="custom-style">
+    <columns col="12" class="custom-style">
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium id diam nec ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae condimentum velit. Praesent rhoncus, nisl et vestibulum tincidunt, turpis sem tincidunt mi, nec dictum urna nisi ullamcorper ante. Maecenas eu turpis id urna rhoncus ultrices. Nam maximus sollicitudin pharetra. Donec velit quam, vulputate ut malesuada at, laoreet et magna. Sed vitae risus sed libero posuere feugiat vel vehicula augue. </p>
+     <button class="custom-style" href="#link">btn name</button>
+    </columns>
+  </row>
+</container>
 
-<hr>
+<h-line></h-line>
 <spacer size="50"></spacer>
 <h2 class="text-center">Grid</h2>
 <row>
@@ -54,7 +65,7 @@ subject: My Demo Email
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium id diam nec ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae condimentum velit. Praesent rhoncus, nisl et vestibulum tincidunt, turpis sem tincidunt mi, nec dictum urna nisi ullamcorper ante. Maecenas eu turpis id urna rhoncus ultrices. Nam maximus sollicitudin pharetra. Donec velit quam, vulputate ut malesuada at, laoreet et magna. Sed vitae risus sed libero posuere feugiat vel vehicula augue. </p>
   </columns>
 </row>
-<hr>
+<h-line></h-line>
 <spacer size="50"></spacer>
 <h2 class="text-center">Buttons</h2>
 <row>
@@ -76,11 +87,33 @@ subject: My Demo Email
 </row>
 <spacer size="50"></spacer>
 
-<hr>
+<h-line></h-line>
 <h2 class="text-center">Spacer</h2>
 <p>Stuff on top</p>
 <spacer size="100"></spacer>
 <p>Stuff on bottom</p>
 
+<h2 class="text-center">Alignment</h2>
+<style>.alignment-col {border: 1px solid #333;}</style>
+<h3 class="text-center">Text Alignment</h3>
+<row>
+  <columns class="alignment-col">
+    <p class="text-left">Left (default)</p>
+  </columns>
+  <columns class="alignment-col">
+      <p class="text-center">center</p>
+  </columns>
+  <columns class="alignment-col">
+      <p class="text-right">right</p>
+  </columns>
+</row>
+<h3 class="text-center">Aligning Images</h3>
+<row>
+  <columns>
+    <img class="float-left" src="https://via.placeholder.com/140x100" alt="">
+    <img class="float-center" src="https://via.placeholder.com/140x100" alt="">
+    <img class="float-right" src="https://via.placeholder.com/140x100" alt="">
+  </columns>
+</row>
 <banner><img src="web/images/email/demo/banner-2.png" class="banner__img"></banner>
 {{>footer}}

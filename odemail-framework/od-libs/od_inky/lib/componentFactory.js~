@@ -109,7 +109,7 @@ module.exports = function (element) {
       if (element.children().length > 0) {
         element.children().each(function () {
           $(this).attr('align', 'center');
-          //$(this).addClass('float-center');
+          $(this).addClass('float-center');
         });
         element.find('item, .menu-item').addClass('float-center');
       }
@@ -233,7 +233,7 @@ module.exports = function (element) {
         classes = classes.concat(element.attr('class').split(' '));
       }
 
-      return format('<table %s align="center" class="%s"><tbody><tr><td class="banner__inner"><center>%s</center></td></tr></tbody></table>', attrs, classes.join(' '), inner);
+      return format('<table %s align="center" class="%s"><tbody><tr><td>%s</td></tr></tbody></table>', attrs, classes.join(' '), inner);
 
     // <table-container>
     case this.components.tableContainer:
@@ -242,7 +242,7 @@ module.exports = function (element) {
         classes = classes.concat(element.attr('class').split(' '));
       }
 
-      return format('<table %s align="center" class="%s"><tbody><tr><td class="table-container__inner">%s</td></tr></tbody></table>', attrs, classes.join(' '), inner);
+      return format('<table %s align="center" class="%s"><tbody><tr><td>%s</td></tr></tbody></table>', attrs, classes.join(' '), inner);
 
     //<table-content>
     case this.components.tableContent:
@@ -251,6 +251,6 @@ module.exports = function (element) {
         classes = classes.concat(element.attr('class').split(' '));
       }
   
-      return format('<table %s align="center" class="%s"><tbody><tr><td class="table-content__inner">%s</td></tr></tbody></table>', attrs, classes.join(' '), inner);
+      return format('<table %s align="center" class="%s"><tbody><tr><td>%s</td></tr></tbody></table>', attrs, classes.join(' '), inner);
   }
 }

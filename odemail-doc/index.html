@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
   <link href="assets/images/favicon.png" rel="icon" />
-  <title>Documentation | Your ThemeForest item Name</title>
+  <title>Documentation | odEmail-framework</title>
   <meta name="description" content="Your ThemeForest item Name and description">
   <meta name="author" content="harnishdesign.net">
 
@@ -38,7 +38,7 @@
       <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
         <div class="container-fluid">
           <!-- Sidebar Toggler -->
-          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><spanclass="w-75"></span><span class="w-50"></span></button>
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 
           <!-- Logo -->
           <a class="logo ml-md-3" href="index.html" title="iDocs Template">
@@ -58,30 +58,33 @@
       <!-- Sidebar Navigation-->
       <div class="idocs-navigation bg-light">
         <ul class="nav flex-column ">
-          <li class="nav-item"><a class="nav-link active" href="#intro_start">Getting Started</a>
+          <li class="nav-item"><a class="nav-link active" href="#intro-start">Getting Started</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#intro_installation">Installation</a></li>
-              <li class="nav-item"><a class="nav-link" href="#intro_html">HTML Structure</a></li>
-              <li class="nav-item"><a class="nav-link" href="#intro_less">Less</a></li>
-              <li class="nav-item"><a class="nav-link" href="#intro_odinky">Odinky</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro-installation">Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro-html">HTML Structure</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro-less">Less</a></li>
+              <li class="nav-item"><a class="nav-link" href="#intro-odinky">Odinky</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#info-components">Components</a>
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#component-grid">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="#component-table-content">Table-content</a></li>
+              <li class="nav-item"><a class="nav-link" href="#component-banner">Banner</a></li>
               <li class="nav-item"><a class="nav-link" href="#component-buttons">Buttons</a></li>
               <li class="nav-item"><a class="nav-link" href="#component-spacer">Spacer</a></li>
+              <li class="nav-item"><a class="nav-link" href="#component-hr">Horizontal rule</a></li>
             </ul>
           </li>
+          <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a></li>
           <li class="nav-item"><a class="nav-link" href="#changelog">Changelog</a>
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#changelog_v1-0">v1.0</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#info-faq">FAQ about emails</a>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ about emails</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#faq-test">%%%name%%%</a></li>
-              <li class="nav-item"><a class="nav-link" href="#faq-test">%%%name%%%</a></li>
+              <li class="nav-item"><a class="nav-link" href="#faq-attributes">Support html</a></li>
             </ul>
           </li>
         </ul>
@@ -92,20 +95,29 @@
         <div class="container">
 
           <!-- Getting Started-->
-          <section id="intro_start">
+          <section id="intro-start">
             <h1>Documentation</h1>
           </section>
           <hr class="divider">
 
           <!-- Installation-->
-          <section id="intro_installation">
+          <section id="intro-installation">
             <h2>Installation</h2>
-            <p class="lead">Follow the steps below to setup your site template:</p>
+            <p>1. install packages.<br><code>npm install</code></p>
+            <p>2. from <code>od-libs</code> folder: clone libraries to --> <code>node_modules</code></p>
+            <p>3. will start the project.<br><code>npm start</code></p>
+
+            <hr class="divider">
+            <h2>Other code:</h2>
+            <p>inline you style <br><code>npm run build</code></p>
+            <p>to build as above, then submit to litmus for testing. AWS S3 Account details required (config.json)<br><code>npm run litmus</code></p>
+            <p>to build as above, then send to specified email address for testing. SMTP server details required (config.json)<br><code>npm run mail</code><br>or<br><code>npm run mail -- --to="example.com"</code></p>
+            <p>to build as above, then zip HTML and images for easy deployment to email marketing services.<br><code>npm run zip</code></p>
           </section>
           <hr class="divider">
 
           <!-- HTML Structure-->
-          <section id="intro_html">
+          <section id="intro-html">
             <h2>HTML Structure</h2>
             <p>ODemail follows a simple and easy to customize coding structure. Here is the sample for your reference:</p>
             <ul>
@@ -131,7 +143,7 @@
           <hr class="divider">
 
           <!-- Sass-->
-          <section id="intro_less">
+          <section id="intro-less">
             <h2>Less</h2>
             <p>We have added LESS <code>.less</code> files in template. You can find less file here - <code>src/assets/web/css</code></p>
             <p>Open the <code>less/_variables.scss</code> and Edit the values according to your needs. If you need more Advanced Setup then you can Edit the Respective Files yourself which have been branched inside the same Folder. It is completely at your discretion only to include the Required <code>.less</code></p>
@@ -139,56 +151,102 @@
           </section>
           <hr class="divider">
 
-          <!-- Getting Started-->
-          <section id="intro_odinky">
-            <h1>Odinky</h1>
-            <p>OdInky is a templating language that converts simple HTML tags into the complex table HTML required for emails.</p>
-            <p class="lead">Odinky - his fork <a href="https://github.com/foundation/inky" target="_blank">inky libs</a></p>
-            <hr>
-            <ul>
-              <li><strong>Grid:</strong>
-                <ul>
-                  <li><code>&lt;container&gt;</code></li>
-                  <li><code>&lt;row&gt;</code></li>
-                  <li><code>&lt;columns&gt;</code></li>
-                </ul>
-              </li>
-              <li><strong>Button:</strong> <code>&lt;button&gt;</code>, <code>&lt;button-secondary&gt;</code>, <code>&lt;button-link&gt;</code></li>
-              <li><strong>Spacer:</strong> <code>&lt;spacer&gt;</code></li>
-              <li><strong>Menu:</strong>
-                <ul>
-                  <li><code>&lt;menu&gt;</code></li>
-                  <li><code>&lt;item&gt;</code></li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <hr class="divider">
+<!-- Getting Started-->
+<section id="intro-odinky">
+  <h1>Odinky</h1>
+  <p>OdInky is a templating language that converts simple HTML tags into the complex table HTML required for emails.</p>
+  <p class="lead">Odinky - his fork <a href="https://github.com/foundation/inky" target="_blank">inky libs</a></p>
+  <hr>
+  <ul>
+    <li><strong>Grid:</strong>
+      <ul>
+        <li><code>&ltcontainer&gt</code></li>
+        <li><code>&lttable-content&gt</code></li>
+        <li><code>&ltrow&gt</code></li>
+        <li><code>&ltcolumns&gt</code></li>
+      </ul>
+    </li>
+    <li><strong>Button:</strong> <code>&lt;button&gt;</code>, <code>&lt;button-secondary&gt;</code>, <code>&lt;button-link&gt;</code></li>
+    <li><strong>Spacer:</strong> <code>&lt;spacer&gt;</code></li>
+    <li><strong>Menu:</strong>
+      <ul>
+        <li><code>&lt;menu&gt;</code></li>
+        <li><code>&lt;item&gt;</code></li>
+      </ul>
+    </li>
+  </ul>
+  <p>You can set custom styles for any component:</p>
+  <pre><code class="html">
+  &lt;container class=&quot;custom-style&quot;&gt;
+    &lt;row class=&quot;custom-style&quot;&gt;
+      &lt;columns col=&quot;12&quot; class=&quot;custom-style&quot;&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium id diam nec ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae condimentum velit. Praesent rhoncus, nisl et vestibulum tincidunt, turpis sem tincidunt mi, nec dictum urna nisi ullamcorper ante. Maecenas eu turpis id urna rhoncus ultrices. Nam maximus sollicitudin pharetra. Donec velit quam, vulputate ut malesuada at, laoreet et magna. Sed vitae risus sed libero posuere feugiat vel vehicula augue. &lt;/p&gt;
+       &lt;button class=&quot;custom-style&quot; href=&quot;#link&quot;&gt;btn name&lt;/button&gt;
+      &lt;/columns&gt;
+    &lt;/row&gt;
+  &lt;/container&gt;
+  </code></pre>
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;table align=&quot;center&quot; class=&quot;container custom-style&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;h2 class=&quot;text-center&quot;&gt;Custom style for component&lt;/h2&gt;
+          &lt;table class=&quot;row custom-style&quot;&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th class=&quot;custom-style col-12 columns&quot;&gt;
+                  &lt;table&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;
+                          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium id
+                            diam nec ornare. Interdum et malesuada fames ac ante ipsum primis in
+                            faucibus. Maecenas vitae condimentum velit. Praesent rhoncus, nisl et
+                            vestibulum tincidunt, turpis sem tincidunt mi, nec dictum urna nisi
+                            ullamcorper ante. Maecenas eu turpis id urna rhoncus ultrices. Nam maximus
+                            sollicitudin pharetra. Donec velit quam, vulputate ut malesuada at, laoreet
+                            et magna. Sed vitae risus sed libero posuere feugiat vel vehicula augue.
+                          &lt;/p&gt;
+                          &lt;table class=&quot;button custom-style&quot;&gt;
+                            &lt;tbody&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;
+                                  &lt;table&gt;
+                                    &lt;tbody&gt;
+                                      &lt;tr&gt;
+                                        &lt;td&gt;&lt;a href=&quot;#link&quot;&gt;btn name&lt;/a&gt;&lt;/td&gt;
+                                      &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+                                  &lt;/table&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                          &lt;/table&gt;
+                        &lt;/th&gt;
+                        &lt;th class=&quot;expander&quot;&gt;&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/grid.html"></iframe>
+</section>
+<hr class="divider">
 
 <!-- Components -->
 <section id="info-components">
   <h2>Components</h2>
 </section>
-
-<!--
-<section id="component-test">
-  <h2>Test</h2>
-  <p class="text-4">Default component.</p>
-  <h3>INKY (syntax):</h3>
-  <pre><code class="html">
-    inky
-  </code></pre>
-              
-  <h3>HTML:</h3>
-  <pre><code class="html">
-  HTML
-  </code></pre>
-  <h3>DEMO:</h3>
-  <iframe class="code-iframe" src="examples/bottons.html"></iframe>
-</section>
-
-<hr class="divider">
--->
 
 <section id="component-grid">
   <h2>Grid</h2>
@@ -250,6 +308,65 @@
   </code></pre>
   <h3>DEMO:</h3>
   <iframe class="code-iframe" src="examples/grid.html"></iframe>
+</section>
+<hr class="divider">
+
+<section id="component-table-content">
+  <h2>Table-content</h2>
+  <p class="text-4">When using Inky HTML, the &lt;table-content&gt; tag will create a &lt;table&gt;, &lt;tr&gt;, &lt;th&gt; structure needed to create consistent full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The .table-content__inner class is available to add padding to the wrapper.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+  &lt;table-content&gt;
+    &lt;h1&gt;OD test email&lt;/h1&gt;
+    &lt;p class=&quot;table-content__text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus metus at bibendum maximus.&lt;a href=&quot;https://site.com&quot; class=&quot;table-content__link&quot;&gt;youLink&lt;/p&gt;
+  &lt;/table-content&gt;
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;table align=&quot;center&quot; class=&quot;table-content&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;table-content__inner&quot;&gt;
+          &lt;h1&gt;OD test email&lt;/h1&gt;
+          &lt;p class=&quot;table-content__text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus metus at bibendum maximus. &lt;a href=&quot;https://site.com&quot; class=&quot;table-content__link&quot;&gt;youLink&lt;/p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/table-content.html"></iframe>
+</section>
+<hr class="divider">
+
+
+<section id="component-banner">
+  <h2>Banner</h2>
+
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+  &lt;banner&gt;
+    &lt;img src=&quot;web/images/email/demo/banner.png&quot; class=&quot;banner__img&quot;&gt;
+  &lt;/banner&gt;     
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;table align=&quot;center&quot; class=&quot;banner&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;banner__inner&quot;&gt;
+          &lt;center&gt;
+            &lt;img src=&quot;web/images/email/demo/banner.png&quot; class=&quot;banner__img&quot; align=&quot;center&quot;&gt;
+          &lt;/center&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;            
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/banner.html"></iframe>
 </section>
 <hr class="divider">
 
@@ -321,8 +438,7 @@
 
 
 <section id="component-spacer">
-  <h2>Test</h2>
-  <p class="text-4">Default component.</p>
+  <h2>Spacer</h2>
   <h3>INKY (syntax):</h3>
   <pre><code class="html">
   &lt;p&gt;Stuff on top&lt;/p&gt;
@@ -347,30 +463,136 @@
 </section>
 <hr class="divider">
 
+<section id="component-hr">
+  <h2>Alignment</h2>
+  <p>Centering, images, text, buttons, and menus in HTML emails made easy.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+&lt;style&gt;.alignment-col {border: 1px solid #333;}&lt;/style&gt;
+&lt;h3 class=&quot;text-center&quot;&gt;Text Alignment&lt;/h3&gt;
+&lt;row&gt;
+  &lt;columns class=&quot;alignment-col&quot;&gt;
+    &lt;p class=&quot;text-left&quot;&gt;Left (default)&lt;/p&gt;
+  &lt;/columns&gt;
+  &lt;columns class=&quot;alignment-col&quot;&gt;
+      &lt;p class=&quot;text-center&quot;&gt;center&lt;/p&gt;
+  &lt;/columns&gt;
+  &lt;columns class=&quot;alignment-col&quot;&gt;
+      &lt;p class=&quot;text-right&quot;&gt;right&lt;/p&gt;
+  &lt;/columns&gt;
+&lt;/row&gt;
+&lt;h3 class=&quot;text-center&quot;&gt;Aligning Images&lt;/h3&gt;
+&lt;row&gt;
+  &lt;columns&gt;
+    &lt;img class=&quot;float-left&quot; src=&quot;https://via.placeholder.com/140x100&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;float-center&quot; src=&quot;https://via.placeholder.com/140x100&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;float-right&quot; src=&quot;https://via.placeholder.com/140x100&quot; alt=&quot;&quot;&gt;
+  &lt;/columns&gt;
+&lt;/row&gt;
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;style&gt;
+    .alignment-col {
+      border: 1px solid #333;
+    }
+  &lt;/style&gt;
+  &lt;h3 class=&quot;text-center&quot;&gt;Text Alignment&lt;/h3&gt;
+  &lt;table class=&quot;row&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th class=&quot;alignment-col col-4 columns&quot;&gt;
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th&gt;
+                  &lt;p class=&quot;text-left&quot;&gt;Left (default)&lt;/p&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/th&gt;
+        &lt;th class=&quot;alignment-col col-4 columns&quot;&gt;
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th&gt;
+                  &lt;p class=&quot;text-center&quot;&gt;center&lt;/p&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/th&gt;
+        &lt;th class=&quot;alignment-col col-4 columns&quot;&gt;
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th&gt;
+                  &lt;p class=&quot;text-right&quot;&gt;right&lt;/p&gt;
+                &lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;h3 class=&quot;text-center&quot;&gt;Aligning Images&lt;/h3&gt;
+  &lt;table class=&quot;row&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th class=&quot;col-12 columns&quot;&gt;
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th&gt;
+                  &lt;img class=&quot;float-left&quot; src=&quot;https://via.placeholder.com/140x100&quot; alt&gt;
+                  &lt;img class=&quot;float-center&quot; src=&quot;https://via.placeholder.com/140x100&quot; alt&gt;
+                  &lt;img class=&quot;float-right&quot; src=&quot;https://via.placeholder.com/140x100&quot; alt&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;expander&quot;&gt;&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/alignment.html"></iframe>
+</section>
+
+<hr class="divider">
 
 
+<section id="component-hr">
+  <h2>Horizontal rule</h2>
+  <p class="text-4">Default component.</p>
+  <h3>INKY (syntax):</h3>
+  <pre><code class="html">
+    &lt;h-line&gt;&lt;/h-line&gt;
+  </code></pre>
+              
+  <h3>HTML:</h3>
+  <pre><code class="html">
+  &lt;table class=&quot;h-line&quot;&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&amp;nbsp;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  </code></pre>
+  <h3>DEMO:</h3>
+  <iframe class="code-iframe" src="examples/hr.html"></iframe>
+</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<hr class="divider">
           <!-- Changelog -->
-          <section id="info-changelog">
+          <section id="changelog">
             <h2>Changelog</h2>
             <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p>
-            <h3 id="v1-0">Version 1.0 <small class="text-muted">(04.03.2022)</small></h3>
+            <h3 id="changelog_v1-0">Version 1.0 <small class="text-muted">(04.03.2022)</small></h3>
             <ul class="changelog">
               <li><span class="badge badge-success">Added</span> Your information here for added new feature</li>
               <li><span class="badge badge-danger">Fixed</span> Some minor bugs for browser compatibility</li>
@@ -383,9 +605,126 @@
             <p>Initial Release</p>
           </section>
 
+          <section id="faq">
+            <h2>F.A.Q</h2>
+          </section>
+
+          <section id="faq-attributes">
+            <h2>List of supported HTML attributes in an email template</h2>
+            <table class="table table-bordered table table-striped table-docs">
+              <tbody>
+                <tr>
+                  <th>Tag</th>
+                  <th>attributes support</th>
+                </tr>
+                <tr>
+                  <td>a</td>
+                  <td>class, href, id, style, target</td>
+                </tr>
+                <tr>
+                  <td>b</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>br</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>p</td>
+                  <td>align, class, dir, id, style</td>
+                </tr>
+                <tr>
+                  <td>font</td>
+                  <td>class, color, face, id, size, style</td>
+                </tr>
+                <tr>
+                  <td>h1-h6</td>
+                  <td>align, class, dir, id, style</td>
+                </tr>
+                <tr>
+                  <td>head</td>
+                  <td>dir, lang</td>
+                </tr>
+                <tr>
+                  <td>hr</td>
+                  <td>align, size, width</td>
+                </tr>
+                <tr>
+                  <td>i</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>img</td>
+                  <td>align, border, class, height, hspace, id, src, style, usemap, vspace, width</td>
+                </tr>
+                <tr>
+                  <td>label</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>li</td>
+                  <td>class, dir, id, style, type</td>
+                </tr>
+                <tr>
+                  <td>ol</td>
+                  <td>class, dir, id, style, type</td>
+                </tr>
+                <tr>
+                  <td>p</td>
+                  <td>align, class, dir, id, style</td>
+                </tr>
+                <tr>
+                  <td>s</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>small</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>span</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>strike</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>strong</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>table</td>
+                  <td>align, bgcolor, border, cellpadding, cellspacing, class, dir, frame, id, rules, style, width</td>
+                </tr>
+                <tr>
+                  <td>td</td>
+                  <td>abbr, align, bgcolor, class, colspan, dir, height, id, lang, rowspan, scope, style, valign, width
+                  </td>
+                </tr>
+                <tr>
+                  <td>th</td>
+                  <td>abbr, align, background, bgcolor, class, colspan, dir, height, id, lang, scope, style, valign,
+                    width</td>
+                </tr>
+                <tr>
+                  <td>tr</td>
+                  <td>align, bgcolor, class, dir, id, style, valign</td>
+                </tr>
+                <tr>
+                  <td>u</td>
+                  <td>class, id, style</td>
+                </tr>
+                <tr>
+                  <td>ul</td>
+                  <td>class, dir, id, style</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </div>
       </div>
-
+  
     </div>
     <!-- Content end -->
 
@@ -402,16 +741,11 @@
   <!-- Back To Top -->
   <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript-->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Highlight JS -->
-  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
-  <!-- Easing -->
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <!-- Magnific Popup -->
-  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <!-- Custom Script -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script> 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+  <script src="assets/vendor/highlight.js/highlight.min.js"></script> 
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
   <script src="assets/js/theme.js"></script>
 </body>
 

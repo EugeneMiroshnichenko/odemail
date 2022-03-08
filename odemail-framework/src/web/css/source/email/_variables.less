@@ -1,14 +1,8 @@
 // Colors
-@color__1: #000;
-@color__2: #1A1A1A;
-@color__3: #242424;
-@color__4: #333;
-@color__5: #3498DB;
-@color__6: #34495E;
-@color__7: #FFF;
-@color__8: #ECF0F1;
-@color__9: #BDC3C7;
-@color__10: #95A5A6;
+@base__primary-color: #34495E;
+@base__border-color: #BDC3C7;
+@text__color: #000;
+
 
 // General
 @font-family__base: 'Helvetica', sans-serif;
@@ -16,17 +10,12 @@
 
 
 @container__width: 600px;
-@border__color: @color__9;
-@text__color: @color__1;
-
-
-
 
 
 //typography
-@body__background: @color__6;
+@body__background: @base__primary-color;
 @body__width: 100%;
-@body__color: @color__1;
+@body__color: #000;
 @body__font-weight: normal;
 @body__line-height: 24px;
 @body__font-size: 16px;
@@ -44,13 +33,13 @@
 @h6__font-size: 18px;
 @paragraph__margin-bottom: 10px;
 @small__font-size: 80%;
-@small__font-color: @color__1;
-@hr__width: @container__width;
-@hr__border: 1px solid @border__color;
-@hr__margin: 10px auto;
-@link__color: @color__1;
+@small__font-color: #000;
+
+
+//link
+@link__color: #000;
 @link__text-decoration: none;
-@link__hover-color: @color__1;
+@link__hover-color: #000;
 @link__hover-text-decoration: none;
 
 
@@ -62,20 +51,20 @@
 @menu__width: @container__width;
 @menu__padding-left: 65px;
 @menu__padding-right: 65px;
-@menu-item__color: @color__2;
+@menu-item__color: #000;
 @menu-item__padding: 30px 10px;
 
-//button
+//buttons
 @button__font-family: @font-family__base;
 @button__font-size: 16px;
 @button__font-weight: normal;
 @button__margin: 0;
 @button__padding: 12px 25px;
-@button__background: @color__6;
+@button__background: @base__primary-color;
 @button__color: #fff;
-@button__border: 1px solid @color__6;
+@button__border: 1px solid @base__primary-color;
 @button__radius: 0;
-@button__background--hover: @color__1;
+@button__background--hover: #000;
 @button__color--hover: #fff;
 
 @button-secondary__font-family: @font-family__base;
@@ -83,11 +72,11 @@
 @button-secondary__font-weight: normal;
 @button-secondary__margin: 0;
 @button-secondary__padding: 12px 25px;
-@button-secondary__background: transperent;
-@button-secondary__color: @color__6;
-@button-secondary__border: 1px solid @color__6;
+@button-secondary__background: transparent;
+@button-secondary__color: @base__primary-color;
+@button-secondary__border: 1px solid @base__primary-color;
 @button-secondary__radius: 0;
-@button-secondary__background--hover: @color__6;
+@button-secondary__background--hover: @base__primary-color;
 @button-secondary__color--hover: #fff;
 
 @button-link__font-family: @font-family__base;
@@ -95,20 +84,25 @@
 @button-link__font-weight: normal;
 @button-link__margin: 0;
 @button-link__padding: 12px 25px;
-@button-link__background: transperent;
-@button-link__color: @color__6;
-@button-link__border: 1px solid transperent;
+@button-link__background: transparent;
+@button-link__color: @base__primary-color;
+@button-link__border: 1px solid transparent;
 @button-link__radius: 0;
-@button-link__background--hover: @color__6;
+@button-link__background--hover: @base__primary-color;
 @button-link__color--hover: #fff;
 
-//button-tertiary, button-quaternary ....
+//button-tertiary, button-quaternary ...
 
 
-@table-container__width: 600px;
+@table-content__background-color: transparent;
+@table-content__width: 100%;
+@table-content__padding: 20px;
 
-@table-content__width: 500px;
 
+//hr
+@hr__width: @container__width;
+@hr__border: 1px solid @base__border-color;
+@hr__margin: 10px auto;
 
 //=========================================
 // utilities
